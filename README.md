@@ -30,3 +30,18 @@ class Perro{
   +morder(cosa:String):String
  }
 ```
+```mermaid
+classDiagram
+class Criatura{
++int hp
++int mana
+}
+<<abstract>> Criatura
+Criatura <|-- Enemigo
+Animal: +alimentar()
+Animal: +sonar()*
+class Perro{
+  +Strng raza
+  +morder(cosa:String):String
+ }
+```
