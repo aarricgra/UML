@@ -1,6 +1,6 @@
 # Diagrama de clases
 
-El siguiente diagrame reprenta la esctructura de clases de la aplicacion
+El siguiente diagrama representa la esctructura de clases de la aplicacion
 
 
 
@@ -52,4 +52,23 @@ class Enemy{
   +attack()
   +rest()
 }
+```
+# Diagrama de Actividades
+
+```mermaid
+flowchart
+    A{Log in or Sing in } --> |Log in|B[Introducir correo]
+      B --> C{Correo Registrado?}
+      C-->|Si| D[Introducir contraseña]
+        D-->E{Contraseña correcta?}
+        E-->|Si| F[Login] 
+        E-->|No| D
+      C-->|No| B
+    A --> |Sing in|G[Introducir correo]
+      G --> H{Correo Registrado?}
+      H-->|No| I[Introducir contraseña]
+        I-->J{Contraseña Valida?}
+        J-->|Si| K[Sing in] 
+        J-->|No| I
+      H-->|Si| G
 ```
