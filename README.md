@@ -72,3 +72,36 @@ flowchart
         J-->|No| I
       H-->|Si| G
 ```
+
+# Estados
+
+## Movement
+```mermaid
+stateDiagram-v2
+    state "Idle" as normal
+    state "Jumping" as saltando
+    state "Crouching" as agachado
+    state "Running" as corriendo
+
+    normal --> agachado
+    normal --> saltando
+    normal --> corriendo
+    
+```
+## HP
+```mermaid
+stateDiagram-v2
+    state "FullHP" as toda
+    state "NotFullHP" as sintoda
+    state "LowHP" as poca
+    state "Muerto" as nada
+ 
+    toda --> sintoda: Recibir golpe
+    toda --> nada: Recibir golpe
+    sintoda --> poca: Recibir golpe
+    toda --> poca: Recibir golpe
+    sintoda --> nada: Recibir golpe
+    poca --> nada: Recibir golpe
+    
+```
+## 
